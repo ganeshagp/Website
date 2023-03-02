@@ -1,0 +1,133 @@
+#titte{
+    color: white;
+}
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.5;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+#navbar{
+    color: blue;
+    padding: 4px 5px;
+    margin: 0%;
+}
+.navbar-brand{
+    font-size: 2.5rem;
+    font-family:  'Ubuntu', sans-serif;
+    font-weight: bold;
+}
+.navbar-item{
+    padding: 0 18px;
+}
+.nav-link{
+    font-size: 1.2rem;
+    font-weight: lighter;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn {
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Georgia;
+    color: #ffffff;
+    font-size: 24px;
+    background: #3498db;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+  }
+
+
+
+h3{
+    text-align: center;
+}
+.working{
+    width: 80%;
+}
+
+#heading{
+    background-color: black;
+    color: white;
+    padding: 5% 10%;
+    padding-top: 10%;
+    text-align: center;
+}
+.carousel-item{
+    padding: 7% 10%;
+}
+#features{
+    text-align: center;
+    background-color: white;  
+    padding: 5% 10%;  
+}
+.text1{
+    width: 60%;
+    margin: auto;
+    list-style: none;
+    text-align: left;
+}
+#roles{
+    text-align: center;
+    padding: 5% 10%;
+    padding-top: 10%;
+    background-color: wheat;
+}
+.rolesimg{
+    width: 20%;
+    align-content: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.rolestext{
+    font-size: 1rem;
+}
+
+#footer{
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding-bottom: 0%;
+}
+.footer-icon{
+    padding: 2% 5%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#fform{
+    padding: 7.5% 10%;
+}
+.forminput{
+    padding-top: 2.5%;
+}
+.formlabel{
+    padding-top: 2.5%;
+}
