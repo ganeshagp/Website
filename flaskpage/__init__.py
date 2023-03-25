@@ -3,7 +3,6 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
 import os
-import pymongo
                 
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
