@@ -8,7 +8,7 @@ import os
 dir_path = os.path.dirname(os.path.realpath(__file__))
 app = Flask(__name__)
 app.config['SECRET_KEY']='secret'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mongodb+srv://digitransservices:<ZC8YzvyMLpTyOfI2>@cluster0.tzxrmgb.mongodb.net/?retryWrites=true&w=majority'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 db = SQLAlchemy(app) 
 bcrypt=Bcrypt(app)
 login_manager=LoginManager(app)
