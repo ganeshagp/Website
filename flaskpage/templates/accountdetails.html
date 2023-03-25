@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{%block content%}
+    {% with messages = get_flashed_messages(with_categories=true)%}
+        {% if messages %}
+            {% for category,message in messages %}
+                <div class="alert alert-{{category}}">
+                    <p style="text-align: center;">{{message}}</p>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <section id="fform" class="content-section">
+        <div class="col-sm-5 media">
+            <img class="col-sm-5 rounded-circle account-img" src="{{ image_file }}">
+            <div class="col-sm-5 media-body">
+              <h2 class="col-sm-5 account-heading">{{ current_user.username }}</h2>
+              <p class="col-sm-5 text-secondary">{{ current_user.email }}</p>
+            </div>
+        </div>
+        <form method="POST" action="{{ url_for('accountdetails')}}" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            <div class="form-group row">
+                <legend class="col-sm-5 border-bottom mb-4">Account Info</legend>
+                <div class="form-group row">
+                    {{ form.username.label(class="col-sm-2 col-form-label formlabel") }}
+                    {% if form.username.errors %}
+                    <div class="col-sm-5 forminput">
+                        {{ form.username(class="form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.username.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% else %}
+                    <div class="col-sm-5 forminput">
+                        {{ form.username(class="form-control") }}
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="form-group row">
+                    {{ form.email.label(class="col-sm-2 col-form-label formlabel") }}
+                    {% if form.email.errors %}
+                    <div class="col-sm-5 forminput">
+                        {{ form.email(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.email.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% else %}
+                    <div class="col-sm-5 forminput">
+                        {{ form.email(class="form-control") }}
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="form-group row">
+                    {{ form.picture.label(class="col-sm-2 col-form-label formlabel") }}
+                    {{ form.picture(class="col-sm-2 form-control-file") }}
+                    {% if form.picture.errors %}
+                    <div class="invalid-feedback">
+                        {% for error in form.picture.errors %}
+                            <span>{{ error }}</span></br>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-primary") }}
+            </div>
+        </form>
+    </section>
+{% endblock %}
