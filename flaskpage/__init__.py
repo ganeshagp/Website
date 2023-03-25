@@ -16,8 +16,4 @@ login_manager=LoginManager(app)
 login_manager.login_view='login'
 login_manager.login_message_category='info'
 
-with app.app_context():
-    db.init_app(app)
-    db.create_all()
-
 from flaskpage import routes
